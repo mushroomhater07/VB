@@ -1,15 +1,15 @@
-﻿Module Dict
+Imports System
 
-    Sub Main()
-        Dim dict As New Dictionary(Of String, Integer)
-        dict.Add("hello", 20)               'add value
-        dict.Clear() 'clear all
-        Dim result As Integer = 0
-        dict("hello") = 25                  'modify
-        dict.TryGetValue("hello", result)   'lookup
-        Console.WriteLine(result)
-        dict.Remove("hello")                'remove
-        Console.Read()
+Module Dict
+    Sub Main(args As String())
+        Dim dict As  new dictionary(Of String, Integer)
+        dict.Add("bird",20)
+        Console.Write(dict.Count)
+        If dict.ContainsKey("") Then
+            Console.ReadLine()
+        End If                    
+        
+        
+        
     End Sub
-
 End Module
